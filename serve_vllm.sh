@@ -18,7 +18,7 @@ MODEL_PID=$(ps aux | grep "$MODEL_LAUNCH_CMD" | grep -v grep | awk '{print $2}')
 if [ -z "$MODEL_PID" ]
 then
     echo "starting model download" 
-    echo $(ls ..)
+    echo $VLLM_ARGS
     python3 -m vllm.entrypoints.openai.api_server $VLLM_ARGS
     echo "launched model" | tee -a /root/debug.log
 else
