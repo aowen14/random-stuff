@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "VLLM_ARGS originally: $VLLM_ARGS
+echo "VLLM_ARGS originally: $VLLM_ARGS"
 
 if [ -z "$VLLM_ARGS" ]
 then
